@@ -114,8 +114,6 @@ class PostgreSqlDao(object):
             while True:  # Batch fetching
                 fetched_ads = cur.fetchmany(self.fetch_count)
                 if fetched_ads:
-                    self.logger.info(max_bidding_cpm)
-                    self.logger.info(fetched_ads)
                     max_bidding_cpm = self.update_max_bidding_cpm(max_bidding_cpm, fetched_ads)
                     ads += fetched_ads
                 if self.stop_fetching_ads(max_bidding_cpm, fetched_ads):
