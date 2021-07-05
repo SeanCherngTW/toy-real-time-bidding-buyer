@@ -32,7 +32,6 @@ class RedisDao(object):
     def get_ads(self):
         ads = self.redis_client.get(self.AD_KEY)
         ads = pickle.loads(ads) if ads else []
-        self.logger.info('Get Ads from Redis')
         return ads
 
     def set_ads(self, ads):
