@@ -32,7 +32,7 @@ class PostgreSqlDao(object):
 
     def __del__(self):
         self.conn.close()
-        self.logger.info('PostgreSQL disconnected'.)
+        self.logger.info('PostgreSQL disconnected')
 
     def connect_to_ad_db(self):
         '''
