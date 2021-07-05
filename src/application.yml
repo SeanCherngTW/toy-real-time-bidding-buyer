@@ -1,0 +1,12 @@
+server:
+    host: 127.0.0.1
+    port: 5000
+ad:
+    path:
+        model_name: buyer
+        log_file_path: log/
+        dst_dir: log
+db:
+    fetch_count: 1000
+redis:
+    ad_key: ad
